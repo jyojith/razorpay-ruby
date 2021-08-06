@@ -17,6 +17,10 @@ module Razorpay
       request.fetch id
     end
 
+    def self.fetch_by_subscription(id)
+      request.get "?subscription_id=#{id}"
+    end
+
     def self.all(options = {})
       request.all options
     end
